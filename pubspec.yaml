@@ -16,9 +16,11 @@ dependencies:
   fly_ui:
     git: https://github.com/niypoo/fly_ui.git
   bottom_sheet_helper:
-    git: https://github.com/niypoo/bottom_sheet_helper.git
+    git: 
+      url: git@github.com:niypoo/bottom_sheet_helper.git
   date_helper:
-    git: https://github.com/niypoo/date_helper.git
+    git:
+      url: git@github.com:niypoo/date_helper.git
 
 dev_dependencies:
   flutter_test:
