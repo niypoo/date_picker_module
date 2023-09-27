@@ -14,7 +14,8 @@ dependencies:
   get: ^4.6.5
   unicons: ^2.1.1
   fly_ui:
-    git: https://github.com/niypoo/fly_ui.git
+    git:
+      url: git@github.com:niypoo/fly_ui.git
   bottom_sheet_helper:
     git: 
       url: git@github.com:niypoo/bottom_sheet_helper.git
