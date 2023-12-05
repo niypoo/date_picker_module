@@ -66,7 +66,7 @@ class CalendarPicker extends StatelessWidget {
               initialSelectedRange:
                   PickerDateRange(startDate ?? DateTime.now(), endDate),
               onSelectionChanged: (DateRangePickerSelectionChangedArgs args) =>
-                  controller.setCurrentData = args as DateTime,
+                  controller.setCurrentData = args,
               selectionMode: DateRangePickerSelectionMode.range,
               selectionColor: Get.theme.primaryColor,
               todayHighlightColor: Get.theme.colorScheme.secondary,

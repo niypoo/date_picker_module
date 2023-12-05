@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class DatePickerController extends GetxController {
   //current date in edit case or chosen date
-  Rx<dynamic> currentDate = Rx<dynamic>(null);
+  Rx<DateRangePickerSelectionChangedArgs?> currentDate = Rx<DateRangePickerSelectionChangedArgs?>(null);
 
   //constructor
   DatePickerController({
