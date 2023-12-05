@@ -13,11 +13,14 @@ class DurationDataPickerHelper {
     DateTime? startDate,
     DateTime? endDate,
     String? currentValue,
+    int maxDays = 100,
+    required String title,
+    required String subTitle,
   }) async {
     // open picker
     final dynamic payload = await ActionSheetHelper.show(
-      title: 'Logs display date'.tr,
-      subTitle: 'View records during a certain time period.'.tr,
+      title: title,
+      subTitle: subTitle,
       currentValue: currentValue,
       options: [
         ActionSheetOption(title: 'Today'.tr, value: 'Today'),
@@ -80,6 +83,7 @@ class DurationDataPickerHelper {
       return await onCustomDate(
         startDate: startDate,
         endDate: endDate,
+        maxDays: maxDays,
       );
     }
 
@@ -90,6 +94,7 @@ class DurationDataPickerHelper {
   Future<DurationData?> onCustomDate({
     DateTime? startDate,
     DateTime? endDate,
+    int maxDays = 100,
   }) async {
     // open picker
     final DateRangePickerSelectionChangedArgs? payload =
@@ -108,10 +113,13 @@ class DurationDataPickerHelper {
       // different in days
       final int dateRangInDays =
           payload.value.endDate.difference(payload.value.startDate).inDays;
-      if (dateRangInDays > 100) {
+      if (dateRangInDays > maxDays) {
         MessageBottomSheetHelper.show(
           title: 'More than allowed'.tr,
-          subTitle: 'You can view the logs within only 100 days not more.'.tr,
+          subTitle:
+              'You can view the logs within only max days not more.'.trParams({
+            'max': maxDays.toString(),
+          }),
         );
         return null;
       }
