@@ -116,7 +116,7 @@ class DurationDataPickerHelper {
       if (dateRangInDays > maxDays) {
         MessageBottomSheetHelper.show(
           title: 'More than allowed'.tr,
-          subTitle:
+          body:
               'You can view the logs within only max days not more.'.trParams({
             'max': maxDays.toString(),
           }),
