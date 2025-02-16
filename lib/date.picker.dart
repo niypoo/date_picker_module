@@ -29,13 +29,6 @@ class DateAndTimePicker extends StatelessWidget {
               ),
             ),
           ),
-
-          // BUTTON
-          FlyElevatedButton.primary(
-            icon: UniconsLine.check,
-            title: "Save".tr,
-            onPressed: controller.save,
-          ),
         ],
       ),
     );
@@ -74,13 +67,6 @@ class CalendarPicker extends StatelessWidget {
               endRangeSelectionColor: Get.theme.primaryColor,
               rangeSelectionColor: Get.theme.primaryColor.withOpacity(0.2),
             ),
-          ),
-
-          // BUTTON
-          FlyElevatedButton.primary(
-            icon: UniconsLine.check,
-            title: "Save".tr,
-            onPressed: controller.save,
           ),
         ],
       ),
@@ -121,12 +107,6 @@ class DatePicker extends StatelessWidget {
               ),
             ),
           ),
-          // BUTTON
-          FlyElevatedButton.primary(
-            icon: UniconsLine.check,
-            title: "Save".tr,
-            onPressed: controller.save,
-          ),
         ],
       ),
     );
@@ -159,15 +139,24 @@ class TimePicker extends StatelessWidget {
                 ),
               ),
             ),
-            // BUTTON
-            FlyElevatedButton.primary(
-              icon: UniconsLine.check,
-              title: "Save".tr,
-              onPressed: controller.save,
-            ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class PickerSaveButton extends GetView<DatePickerController> {
+  const PickerSaveButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return FlyElevatedButton.primary(
+      icon: UniconsLine.check,
+      title: "Save".tr,
+      onPressed: controller.save,
     );
   }
 }

@@ -20,6 +20,7 @@ class DatePickerHelper {
           maximumDate: maximumDate ?? DateTime.now(),
           minimumDate: minimumDate ?? DateTime(1930, 1, 1),
         ),
+        footer: const PickerSaveButton(),
       ) as DateTime?;
 
   // open Date and Time
@@ -29,6 +30,7 @@ class DatePickerHelper {
         icon: UniconsLine.calendar_alt,
         draggable: true,
         child: DateAndTimePicker(initDate: initDate),
+        footer: const PickerSaveButton(),
       ) as DateTime?;
 
   // open Date and Time
@@ -44,6 +46,7 @@ class DatePickerHelper {
           startDate: startDate,
           endDate: endDate,
         ),
+        footer: const PickerSaveButton(),
       ) as DateRangePickerSelectionChangedArgs?;
 
   // open Time
@@ -55,5 +58,6 @@ class DatePickerHelper {
         child: TimePicker(
           initDate: initDate ?? DateTime.now(),
         ),
+        footer: const PickerSaveButton(),
       ) as DateTime?;
 }
