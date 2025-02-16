@@ -1,6 +1,6 @@
 import 'package:date_picker_module/datePicker.controller.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:fly_ui/views/widgets/buttons/elevatedIconButton.widget.dart';
+import 'package:fly_ui/views/widgets/buttons/elevatedButton.widget.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import 'package:unicons/unicons.dart';
@@ -31,7 +31,7 @@ class DateAndTimePicker extends StatelessWidget {
           ),
 
           // BUTTON
-          FlyElevatedIconButton.primary(
+          FlyElevatedButton.primary(
             icon: UniconsLine.check,
             title: "Save".tr,
             onPressed: controller.save,
@@ -77,7 +77,7 @@ class CalendarPicker extends StatelessWidget {
           ),
 
           // BUTTON
-          FlyElevatedIconButton.primary(
+          FlyElevatedButton.primary(
             icon: UniconsLine.check,
             title: "Save".tr,
             onPressed: controller.save,
@@ -122,7 +122,7 @@ class DatePicker extends StatelessWidget {
             ),
           ),
           // BUTTON
-          FlyElevatedIconButton.primary(
+          FlyElevatedButton.primary(
             icon: UniconsLine.check,
             title: "Save".tr,
             onPressed: controller.save,
@@ -160,7 +160,7 @@ class TimePicker extends StatelessWidget {
               ),
             ),
             // BUTTON
-            FlyElevatedIconButton.primary(
+            FlyElevatedButton.primary(
               icon: UniconsLine.check,
               title: "Save".tr,
               onPressed: controller.save,
