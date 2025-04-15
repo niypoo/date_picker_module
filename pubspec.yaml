@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  syncfusion_flutter_datepicker: ^29.1.37
+  syncfusion_flutter_datepicker: 28.1.36
   get: ^4.6.6
   unicons: ^2.1.1
   fly_ui:
